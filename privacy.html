@@ -1,11 +1,384 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Folio — Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ivory:   #FBF9F4;
+      --cloud:   #F1EEE6;
+      --fog:     #DEDCD3;
+      --charcoal:#2E2C28;
+      --secondary:#84837C;
+      --blue:    #5B7C99;
+      --blue-light:#DCE6ED;
+      --brass:   #B8935A;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      border-bottom: 1px solid var(--fog);
+    }
+
+    .nav-wordmark {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 24px 48px;
+      text-align: center;
+    }
+
+    .page-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 20px;
+    }
+
+    .page-title {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .page-date {
+      font-size: 14px;
+      color: var(--secondary);
+    }
+
+    /* ── Brass rule ── */
+    .brass-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--brass);
+      border: none;
+      margin: 32px auto;
+    }
+
+    /* ── Policy body ── */
+    .policy-body {
+      flex: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      width: 100%;
+    }
+
+    .policy-section {
+      margin-bottom: 48px;
+    }
+
+    .policy-section h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: var(--charcoal);
+    }
+
+    .policy-section p {
+      font-size: 15px;
+      color: var(--charcoal);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section ul {
+      margin: 12px 0 14px 20px;
+    }
+
+    .policy-section ul li {
+      font-size: 15px;
+      color: var(--charcoal);
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    .policy-section a {
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid var(--blue-light);
+      transition: border-color 0.15s;
+    }
+
+    .policy-section a:hover {
+      border-color: var(--blue);
+    }
+
+    /* Callout for the household transparency note */
+    .callout {
+      background: var(--cloud);
+      border-left: 3px solid var(--brass);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .callout p {
+      margin-bottom: 0 !important;
+      font-size: 14px !important;
+      color: var(--secondary) !important;
+    }
+
+    /* Section divider */
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--fog);
+      margin-bottom: 48px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 32px 48px;
+      border-top: 1px solid var(--fog);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy { font-size: 13px; color: var(--secondary); }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--blue); }
+
+    @media (max-width: 600px) {
+      nav { padding: 20px 24px; }
+      .page-header { padding: 48px 24px 32px; }
+      .page-title { font-size: 32px; }
+      footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
-<p>Placeholder page — replace with real content.</p>
+
+  <nav>
+    <a href="index.html" class="nav-wordmark">Folio</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html" class="active">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <p class="page-eyebrow">Legal</p>
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-date">Last updated: June 2026</p>
+      <hr class="brass-rule">
+    </header>
+
+    <div class="policy-body">
+
+      <div class="policy-section">
+        <h2>1. Introduction</h2>
+        <p>Folio ("we", "us", or "our") is a book tracking app for households. This Privacy Policy explains what information we collect when you use Folio, how we use it, and the choices you have.</p>
+        <p>By creating an account, you agree to the practices described in this policy.</p>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>2. Information we collect</h2>
+
+        <p><strong>Information you provide directly</strong></p>
+        <ul>
+          <li><strong>Account information</strong> — your display name and email address when you sign up. If you use Apple Sign-In, Apple provides your email address (or a relay address if you choose to hide your email).</li>
+          <li><strong>Profile information</strong> — your display name and avatar (either a default image or one you upload from your photo library).</li>
+          <li><strong>Household information</strong> — your household's name and the members you invite to join it.</li>
+          <li><strong>Book and library data</strong> — books you add to your library, including reading status, ownership status, star ratings, personal notes, acquisition notes, tags, and the physical location of books in your home (e.g. "Bedroom shelf").</li>
+          <li><strong>Lists</strong> — named collections of books you create, which may be shared with your household.</li>
+          <li><strong>Recommendations</strong> — books you recommend to household members, including any notes you attach.</li>
+        </ul>
+
+        <p><strong>Information collected automatically</strong></p>
+        <ul>
+          <li><strong>Usage data</strong> — pages visited, features used, and interactions within the app.</li>
+          <li><strong>Crash and diagnostic data</strong> — if the app crashes or encounters an error, we collect technical information including device model, operating system version, and a stack trace. This is handled by Sentry (see Section 5).</li>
+          <li><strong>Device and connection information</strong> — device type, operating system version, and IP address.</li>
+        </ul>
+
+        <p><strong>Information from third parties</strong></p>
+        <ul>
+          <li><strong>Google Books API</strong> — when you scan a barcode or search for a book, we fetch metadata including title, author, cover image, publisher, publication year, genre, and ISBN. This data is stored in our database and is not edited after it is saved.</li>
+          <li><strong>Apple Sign-In</strong> — if you choose Apple Sign-In, Apple provides your name and email address (or a relay address) to create your account.</li>
+        </ul>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>3. How we use your information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Create and manage your account and household</li>
+          <li>Store and display your personal library, reading history, and book data</li>
+          <li>Enable household sharing features — book collections, shared lists, and recommendations between members</li>
+          <li>Identify and fix bugs and crashes in the app (via Sentry)</li>
+          <li>Improve the reliability and performance of Folio</li>
+          <li>Respond to support requests</li>
+        </ul>
+        <p>We do not use your data to serve advertising. We do not sell your personal information to third parties.</p>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>4. Household data sharing</h2>
+        <p>Folio is designed for shared use within a household. If you are part of a household with other members, please be aware that:</p>
+        <ul>
+          <li><strong>All book data is visible to all household members.</strong> This includes your reading status, star ratings, personal notes, tags, and the physical location of books.</li>
+          <li>Your household members can see your full library activity — there are no private fields within a household.</li>
+          <li>Books you add on behalf of a household member are attributed to them within the household view.</li>
+          <li>Recommendations you send to a household member, including any notes, are visible to the sender and recipient.</li>
+        </ul>
+        <div class="callout">
+          <p>If you do not wish to share particular information with your household, we recommend not entering it into the app.</p>
+        </div>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>5. Third-party services</h2>
+        <p>Folio uses the following third-party services. Each has its own privacy policy.</p>
+        <p><strong>Supabase</strong> — our database and authentication provider. Your account credentials, library data, and all content you enter into Folio is stored on Supabase infrastructure.<br>
+        <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a></p>
+        <p><strong>Google Books API</strong> — used to retrieve book metadata when you scan a barcode or search for a title. Queries include the ISBN or search terms you enter.<br>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+        <p><strong>Apple Sign-In</strong> — if you choose this sign-in method, Apple handles authentication and may share your name and email address (or a relay address) with us.<br>
+        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></p>
+        <p><strong>Sentry</strong> — we use Sentry for crash reporting and error monitoring. If the app crashes, Sentry automatically collects diagnostic information including device model, OS version, app version, and a technical stack trace. Sentry does not collect the content of your library or personal notes.<br>
+        <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry Privacy Policy</a></p>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>6. Data retention</h2>
+        <p>We retain your data for as long as your account is active. If you delete your account, your profile, library entries, lists, tags, locations, and activity history will be permanently deleted. Some data may remain in backups for a short period before being purged.</p>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>7. Your rights and choices</h2>
+        <p>Depending on where you live, you may have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> the personal information we hold about you</li>
+          <li><strong>Correct</strong> inaccurate information</li>
+          <li><strong>Delete</strong> your account and personal data</li>
+          <li><strong>Export</strong> your data</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at the address in Section 10. You can also delete your account directly within the app via Profile &amp; Settings → Account → Delete account.</p>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>8. Children's privacy</h2>
+        <p>Folio is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>9. Changes to this policy</h2>
+        <p>We may update this policy from time to time. If we make material changes, we will notify you within the app or by email before the changes take effect. The "Last updated" date at the top of this page reflects the most recent revision.</p>
+      </div>
+
+      <hr class="section-rule">
+
+      <div class="policy-section">
+        <h2>10. Contact us</h2>
+        <p>If you have questions about this Privacy Policy or how we handle your data, please contact us at:</p>
+        <p><a href="mailto:folio.dev26@gmail.com">folio.dev26@gmail.com</a></p>
+        <p style="margin-top: 32px; font-size: 14px; color: var(--secondary); font-style: italic;">Folio — your household library, together.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p class="footer-copy">© 2026 Folio</p>
+    <ul class="footer-links">
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+  </footer>
+
 </body>
 </html>

@@ -1,15 +1,325 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Folio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folio — Your household library, together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ivory:   #FBF9F4;
+      --cloud:   #F1EEE6;
+      --fog:     #DEDCD3;
+      --charcoal:#2E2C28;
+      --secondary:#84837C;
+      --blue:    #5B7C99;
+      --blue-light:#DCE6ED;
+      --brass:   #B8935A;
+      --green:   #5C7A5C;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      border-bottom: 1px solid var(--fog);
+    }
+
+    .nav-wordmark {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    /* ── Brass rule ── */
+    .brass-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--brass);
+      border: none;
+      margin: 0 auto 40px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 100px 24px 80px;
+      max-width: 680px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(40px, 7vw, 64px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 24px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--secondary);
+      max-width: 480px;
+      margin-bottom: 48px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 14px 28px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .btn-primary:hover {
+      background: #4a6b87;
+      transform: translateY(-1px);
+    }
+
+    .btn-primary svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .hero-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--secondary);
+    }
+
+    /* ── Features strip ── */
+    .features {
+      background: var(--cloud);
+      border-top: 1px solid var(--fog);
+      border-bottom: 1px solid var(--fog);
+      padding: 72px 24px;
+    }
+
+    .features-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .features-title {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .features-sub {
+      font-size: 15px;
+      color: var(--secondary);
+      margin-bottom: 48px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      text-align: left;
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .feature-icon {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .feature-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+
+    .feature-desc {
+      font-size: 13px;
+      color: var(--secondary);
+      line-height: 1.55;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 32px 48px;
+      border-top: 1px solid var(--fog);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--secondary);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover {
+      color: var(--blue);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      nav { padding: 20px 24px; }
+      .hero { padding: 72px 24px 64px; }
+      footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
-<h1>Folio</h1>
-<p>Placeholder page — replace with real content.</p>
-<ul>
-<li><a href="/privacy.html">Privacy Policy</a></li>
-<li><a href="/support.html">Support</a></li>
-</ul>
+
+  <nav>
+    <a href="index.html" class="nav-wordmark">Folio</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <p class="hero-eyebrow">Available on iOS</p>
+      <h1 class="hero-title">Your household library,<br><em>together.</em></h1>
+      <hr class="brass-rule">
+      <p class="hero-sub">Folio is a book tracker for the books you own, the books you're reading, and the ones you've been meaning to get to — shared with the people you share a home with.</p>
+      <a href="#" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+        </svg>
+        Download on the App Store
+      </a>
+      <p class="hero-note">Free to download · iPhone</p>
+    </section>
+
+    <section class="features">
+      <div class="features-inner">
+        <h2 class="features-title">Everything your shelf needs</h2>
+        <p class="features-sub">Scan a barcode. The rest takes care of itself.</p>
+        <hr class="brass-rule" style="margin-bottom: 48px;">
+        <div class="features-grid">
+          <div class="feature">
+            <span class="feature-icon">📚</span>
+            <span class="feature-name">Scan to add</span>
+            <p class="feature-desc">Point your camera at any barcode and Folio pulls in the cover, title, author, and more.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🏠</span>
+            <span class="feature-name">Shared household</span>
+            <p class="feature-desc">See what your household is reading, what you own together, and what's on the wishlist.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">⭐</span>
+            <span class="feature-name">Ratings & notes</span>
+            <p class="feature-desc">Rate books, write notes, and track where you are — from TBR to finished.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">📍</span>
+            <span class="feature-name">Know where things are</span>
+            <p class="feature-desc">Tag books by room or shelf so you always know where to find them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-copy">© 2026 Folio</p>
+    <ul class="footer-links">
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+  </footer>
+
 </body>
 </html>
