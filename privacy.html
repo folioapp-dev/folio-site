@@ -6,7 +6,7 @@
   <title>Privacy Policy — Folio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lora:wght@500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,7 +15,8 @@
       --cloud:   #F1EEE6;
       --fog:     #DEDCD3;
       --charcoal:#2E2C28;
-      --secondary:#84837C;
+      --secondary:#6E6D66;
+      --brass-text:#8A6A3A;
       --blue:    #5B7C99;
       --blue-light:#DCE6ED;
       --brass:   #B8935A;
@@ -24,7 +25,7 @@
     body {
       background: var(--ivory);
       color: var(--charcoal);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
       font-size: 16px;
       line-height: 1.6;
       min-height: 100vh;
@@ -82,14 +83,14 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--brass);
+      color: var(--brass-text);
       margin-bottom: 20px;
     }
 
     .page-title {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Quicksand', system-ui, sans-serif;
       font-size: 40px;
-      font-weight: 400;
+      font-weight: 600;
       letter-spacing: -0.02em;
       line-height: 1.15;
       margin-bottom: 16px;
@@ -123,7 +124,7 @@
     }
 
     .policy-section h2 {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Quicksand', system-ui, sans-serif;
       font-size: 22px;
       font-weight: 500;
       letter-spacing: -0.01em;
@@ -256,17 +257,17 @@
 
         <p><strong>Information you provide directly</strong></p>
         <ul>
-          <li><strong>Account information</strong> — your display name and email address when you sign up. If you use Apple Sign-In, Apple provides your email address (or a relay address if you choose to hide your email).</li>
-          <li><strong>Profile information</strong> — your display name and avatar (either a default image or one you upload from your photo library).</li>
-          <li><strong>Household information</strong> — your household's name and the members you invite to join it.</li>
-          <li><strong>Book and library data</strong> — books you add to your library, including reading status, ownership status, star ratings, personal notes, acquisition notes, tags, and the physical location of books in your home (e.g. "Bedroom shelf").</li>
-          <li><strong>Lists</strong> — named collections of books you create, which may be shared with your household.</li>
-          <li><strong>Recommendations</strong> — books you recommend to household members, including any notes you attach.</li>
+          <li><strong>Account information</strong> — your email address and password when you sign up, and the display name you choose.</li>
+          <li><strong>Household information</strong> — your household's name, its members, and its invite code.</li>
+          <li><strong>Your household's library</strong> — the copies of books your household owns, including format, where each copy lives in your home (e.g. "Bedroom shelf"), notes about the copy (such as who gave it to you), tags and collections. Books you add by hand (title, author and other details you type in) are visible only to your household.</li>
+          <li><strong>Your reading</strong> — your own reading status, star ratings, thoughts, and the dates you started and finished a book.</li>
+          <li><strong>Lists and Wishlists</strong> — lists of books you create (shared with your household or kept to yourself) and your Wishlist, which your household can see.</li>
+          <li><strong>Recommendations</strong> — books you recommend to household members.</li>
         </ul>
 
         <p><strong>Information collected automatically</strong></p>
         <ul>
-          <li><strong>Usage data</strong> — pages visited, features used, and interactions within the app.</li>
+          <li><strong>Performance data</strong> — for a small sample of sessions, how long screens and requests take to load. This is handled by Sentry (see Section 5).</li>
           <li><strong>Crash and diagnostic data</strong> — if the app crashes or encounters an error, we collect technical information including device model, operating system version, and a stack trace. This is handled by Sentry (see Section 5).</li>
           <li><strong>Device and connection information</strong> — device type, operating system version, and IP address.</li>
           <li><strong>App version</strong> — which version of Folio you last opened, and when. We use this to make sure everyone is on a version that works properly with their library.</li>
@@ -275,14 +276,12 @@
         <p><strong>Permissions on your device</strong></p>
         <ul>
           <li><strong>Camera</strong> — used only when you tap <em>Scan barcode</em>, to read the barcode on a book. The barcode is read on your device; no photos or video are stored or sent to us.</li>
-          <li><strong>Microphone</strong> — used only when you tap the microphone to dictate a note. Your speech is turned into text on your device by Apple's built-in speech recognition. No audio is recorded, stored, or sent to us or anyone else; only the resulting text is saved, as part of your notes.</li>
         </ul>
-        <p>Both are optional, and you can turn either off at any time in your device's Settings → Folio. Everything else in Folio works without them.</p>
+        <p>Camera access is optional, and you can turn it off at any time in your device's Settings → Folio. You can still search for books or add them by hand without it.</p>
 
         <p><strong>Information from third parties</strong></p>
         <ul>
           <li><strong>Google Books API</strong> — when you scan a barcode or search for a book, we fetch metadata including title, author, cover image, publisher, publication year, genre, and ISBN. This data is stored in our database and is not edited after it is saved.</li>
-          <li><strong>Apple Sign-In</strong> — if you choose Apple Sign-In, Apple provides your name and email address (or a relay address) to create your account.</li>
         </ul>
       </div>
 
@@ -294,7 +293,7 @@
         <ul>
           <li>Create and manage your account and household</li>
           <li>Store and display your personal library, reading history, and book data</li>
-          <li>Enable household sharing features — book collections, shared lists, and recommendations between members</li>
+          <li>Enable household sharing features — the shared household library, collections, shared lists, Wishlists, and recommendations between members</li>
           <li>Identify and fix bugs and crashes in the app (via Sentry)</li>
           <li>Improve the reliability and performance of Folio</li>
           <li>Make sure you're using a version of Folio that works properly, and let you know when it's time to update</li>
@@ -309,10 +308,11 @@
         <h2>4. Household data sharing</h2>
         <p>Folio is designed for shared use within a household. If you are part of a household with other members, please be aware that:</p>
         <ul>
-          <li><strong>All book data is visible to all household members.</strong> This includes your reading status, star ratings, personal notes, tags, and the physical location of books.</li>
-          <li>Your household members can see your full library activity — there are no private fields within a household.</li>
-          <li>Books you add on behalf of a household member are attributed to them within the household view.</li>
-          <li>Recommendations you send to a household member, including any notes, are visible to the sender and recipient.</li>
+          <li><strong>Books belong to the household.</strong> Everyone in your household can see, edit and organize the household's copies, including their locations, notes, tags and collections.</li>
+          <li><strong>Your reading is visible to your household.</strong> Your status, star ratings and thoughts on a book can be seen by the other members (only you can change them).</li>
+          <li>Lists you mark as shared, and your Wishlist, are visible to your household. Lists you keep to yourself are visible only to you.</li>
+          <li>Recommendations are visible to the person who sent them and the person who received them.</li>
+          <li><strong>Joining a household:</strong> when you join another household, the books, locations, tags and collections from your old household move with you into the new one.</li>
         </ul>
         <div class="callout">
           <p>If you do not wish to share particular information with your household, we recommend not entering it into the app.</p>
@@ -328,9 +328,7 @@
         <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a></p>
         <p><strong>Google Books API</strong> — used to retrieve book metadata when you scan a barcode or search for a title. Queries include the ISBN or search terms you enter.<br>
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
-        <p><strong>Apple Sign-In</strong> — if you choose this sign-in method, Apple handles authentication and may share your name and email address (or a relay address) with us.<br>
-        <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></p>
-        <p><strong>Sentry</strong> — we use Sentry for crash reporting and error monitoring. If the app crashes, Sentry automatically collects diagnostic information including device model, OS version, app version, and a technical stack trace. Sentry does not collect the content of your library or personal notes.<br>
+        <p><strong>Sentry</strong> — we use Sentry for crash reporting, error monitoring, and measuring app performance. If the app crashes, Sentry automatically collects diagnostic information including device model, OS version, app version, and a technical stack trace. Sentry does not collect the content of your library, your notes or your thoughts.<br>
         <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry Privacy Policy</a></p>
       </div>
 
@@ -338,7 +336,9 @@
 
       <div class="policy-section">
         <h2>6. Data retention</h2>
-        <p>We retain your data for as long as your account is active. If you delete your account, your profile, library entries, lists, tags, locations, and activity history will be permanently deleted. Some data may remain in backups for a short period before being purged.</p>
+        <p>We retain your data for as long as your account is active. If you delete your account, your profile, your reading (statuses, ratings and thoughts), your lists, your Wishlist and your recommendations are permanently deleted.</p>
+        <p>Your household's library belongs to the household, so if other members remain, the household's books, locations, tags and collections stay with them. If you are the last member of your household, deleting your account also permanently deletes the household and its whole library.</p>
+        <p>Some data may remain in backups for a short period before being purged.</p>
       </div>
 
       <hr class="section-rule">
@@ -352,7 +352,7 @@
           <li><strong>Delete</strong> your account and personal data</li>
           <li><strong>Export</strong> your data</li>
         </ul>
-        <p>To exercise any of these rights, contact us at the address in Section 10. You can also delete your account directly within the app via Profile &amp; Settings → Account → Delete account.</p>
+        <p>To exercise any of these rights, contact us at the address in Section 10. You can also delete your account directly within the app via Profile → Delete account.</p>
       </div>
 
       <hr class="section-rule">
@@ -375,7 +375,7 @@
         <h2>10. Contact us</h2>
         <p>If you have questions about this Privacy Policy or how we handle your data, please contact us at:</p>
         <p><a href="mailto:folio.dev26@gmail.com">folio.dev26@gmail.com</a></p>
-        <p style="margin-top: 32px; font-size: 14px; color: var(--secondary); font-style: italic;">Folio — your household library, together.</p>
+        <p style="margin-top: 32px; font-size: 14px; color: var(--secondary); font-style: italic;">Folio — for people with more books than shelves.</p>
       </div>
 
     </div>

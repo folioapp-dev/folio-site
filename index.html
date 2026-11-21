@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Folio — Your household library, together</title>
+  <title>Folio — For people with more books than shelves</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Lora:wght@500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,7 +15,8 @@
       --cloud:   #F1EEE6;
       --fog:     #DEDCD3;
       --charcoal:#2E2C28;
-      --secondary:#84837C;
+      --secondary:#6E6D66;
+      --brass-text:#8A6A3A;
       --blue:    #5B7C99;
       --blue-light:#DCE6ED;
       --brass:   #B8935A;
@@ -27,7 +28,7 @@
     body {
       background: var(--ivory);
       color: var(--charcoal);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
       font-size: 16px;
       line-height: 1.6;
       min-height: 100vh;
@@ -99,14 +100,14 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--brass);
+      color: var(--brass-text);
       margin-bottom: 24px;
     }
 
     .hero-title {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Quicksand', system-ui, sans-serif;
       font-size: clamp(40px, 7vw, 64px);
-      font-weight: 400;
+      font-weight: 600;
       line-height: 1.1;
       letter-spacing: -0.02em;
       color: var(--charcoal);
@@ -114,7 +115,7 @@
     }
 
     .hero-title em {
-      font-style: italic;
+      font-style: normal;
       color: var(--blue);
     }
 
@@ -132,7 +133,7 @@
       gap: 8px;
       background: var(--blue);
       color: #fff;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Nunito Sans', system-ui, sans-serif;
       font-size: 15px;
       font-weight: 500;
       padding: 14px 28px;
@@ -172,9 +173,9 @@
     }
 
     .features-title {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Quicksand', system-ui, sans-serif;
       font-size: 28px;
-      font-weight: 400;
+      font-weight: 600;
       margin-bottom: 8px;
       letter-spacing: -0.01em;
     }
@@ -187,7 +188,7 @@
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 32px;
       text-align: left;
     }
@@ -199,13 +200,29 @@
     }
 
     .feature-icon {
-      font-size: 22px;
-      line-height: 1;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+    }
+
+    .feature-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .feature-name {
-      font-size: 14px;
-      font-weight: 500;
+      font-family: 'Quicksand', system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
       color: var(--charcoal);
     }
 
@@ -270,10 +287,10 @@
   <main>
     <section class="hero">
       <p class="hero-eyebrow">Available on iOS</p>
-      <h1 class="hero-title">Your household library,<br><em>together.</em></h1>
+      <h1 class="hero-title">For people with more books<br><em>than shelves.</em></h1>
       <hr class="brass-rule">
-      <p class="hero-sub">Folio is a book tracker for the books you own, the books you're reading, and the ones you've been meaning to get to — shared with the people you share a home with.</p>
-      <a href="#" class="btn-primary">
+      <p class="hero-sub">Folio keeps track of every book in your home: where it lives, who has read it, and what they thought. One shelf for the whole household, with your own stars and thoughts on every book.</p>
+      <a href="https://apps.apple.com/us/app/folio-library/id6792103604" class="btn-primary">
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
         </svg>
@@ -285,28 +302,38 @@
     <section class="features">
       <div class="features-inner">
         <h2 class="features-title">Everything your shelf needs</h2>
-        <p class="features-sub">Scan a barcode. The rest takes care of itself.</p>
+        <p class="features-sub">Scan it. Shelve it. Remember why it matters.</p>
         <hr class="brass-rule" style="margin-bottom: 48px;">
         <div class="features-grid">
           <div class="feature">
-            <span class="feature-icon">📚</span>
-            <span class="feature-name">Scan to add</span>
-            <p class="feature-desc">Point your camera at any barcode and Folio pulls in the cover, title, author, and more.</p>
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M8 8v8M11 8v8M14 8v8M17 8v8"/></svg></span>
+            <span class="feature-name">Add books in seconds</span>
+            <p class="feature-desc">Scan a barcode or search by title, and Folio fills in the cover and details. Self-published or special edition? Add it by hand.</p>
           </div>
           <div class="feature">
-            <span class="feature-icon">🏠</span>
-            <span class="feature-name">Shared household</span>
-            <p class="feature-desc">See what your household is reading, what you own together, and what's on the wishlist.</p>
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg></span>
+            <span class="feature-name">One shelf for the household</span>
+            <p class="feature-desc">Books belong to your household, so everyone at home can see them, read them and help organize them.</p>
           </div>
           <div class="feature">
-            <span class="feature-icon">⭐</span>
-            <span class="feature-name">Ratings & notes</span>
-            <p class="feature-desc">Rate books, write notes, and track where you are — from TBR to finished.</p>
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 4 2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 16.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/></svg></span>
+            <span class="feature-name">Your thoughts are yours</span>
+            <p class="feature-desc">Everyone keeps their own reading status, half-star ratings and thoughts, from TBR to Read in 2026.</p>
           </div>
           <div class="feature">
-            <span class="feature-icon">📍</span>
-            <span class="feature-name">Know where things are</span>
-            <p class="feature-desc">Tag books by room or shelf so you always know where to find them.</p>
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg></span>
+            <span class="feature-name">Organize it your way</span>
+            <p class="feature-desc">Locations for every room and shelf, collections for each person (and your own), plus tags and lists.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1"/><path d="M4 13h16M12 9v11"/><path d="M12 9c-1.5-3-5-3-5-1s3 1 5 1c2 0 5 1 5-1s-3.5-2-5 1"/></svg></span>
+            <span class="feature-name">Every book has a story</span>
+            <p class="feature-desc">Note where a special copy came from, who gave it to you, or whether it’s signed.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19s-7-4.4-7-9.5A3.8 3.8 0 0 1 12 7.6a3.8 3.8 0 0 1 7 1.9C19 14.6 12 19 12 19z"/></svg></span>
+            <span class="feature-name">Wishlists and recommendations</span>
+            <p class="feature-desc">A Wishlist the whole household can see (hint, hint), and recommendations for the people you live with.</p>
           </div>
         </div>
       </div>
